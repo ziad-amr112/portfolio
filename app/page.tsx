@@ -3,16 +3,7 @@ import HorizontalScroll from "./component/ScrollSnap";
 import { ecommerceProjects, leadGenProjects, SERVICES,CoursesProjects,BooksProjects} from "./constants";
 import OverlappingSlider from "./component/Overlapslider";
 import AboutMe from "./component/AboutMe";
-import InfinteTitle from "./component/InfinteTitle";
-// constants are now imported directly above, so this line is not needed
-/*
-hero section
-tech stack
-email
-array of projects 
-slider optimization
-logo
- */
+
 export default function Home() {
   return (
     <section>
@@ -20,36 +11,15 @@ export default function Home() {
   title={
     <>
       I Turn Ad Spend Into <span className="animate-flashRed font-bold">Profit</span>
-
-
     </>
   }
   subtitle="Helping startups & brands scale revenue through data-driven funnels, full-funnel strategy, and ROI-focused execution"
   buttonText="Let’s Work Together"
 />
-
-
-
-      {/*  رقم 2 ده سكشن البداية  */}
       <img src="/service-line.png" alt="Service line" />
       <HorizontalScroll paragraph="I'm a performance-driven media buyer, focused on learning, testing, and scaling." items={SERVICES} />
       <img src="/service-line.png" alt="Service line" />
-      {/*  حدد العنوان وتقدر تكنسل الانيمشن لو كتبت  cancelAnimation  */}
-
-      {/* ده سكشن اضافه المشاريع 
-      types  b
-      بتاخد اوبجكيت 
-      {}
-      جواه حاجتين
-      category  المشاريع دي 
-      items المشاريع نفسها
-      slidesPerView: في كم سلايد ظاهره في المره الاحده 
-      height طول الصورة
-      autoplay هل يشتغل بشكل تلقائي ولالا
-      loop عاوزه يفضل يلوب لما يخلص ويتعاد من الاول ولالا 
-      بو اه سيبه لو مشعاوز اعمل 
-      loop={false} او autoplay={false}
-      */}
+   
   <OverlappingSlider
     slidesPerView={2}
     height={" h-44"}

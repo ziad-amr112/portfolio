@@ -12,7 +12,6 @@ import { ThemeProvider } from "./context/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "add title",
-  icons: { icon: "/boi.png" },
   openGraph: {
     type: "website",
     title: "add title",
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
         alt: "add title",
       },
     ],
-    // url: "https://new-portfolio-noor-hesham.vercel.app",
   },
 };
 
