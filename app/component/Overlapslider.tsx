@@ -18,8 +18,6 @@ import ProjectDescription from "./ProjectDescription";
 export const Slider = ({
   title,
   types,
-  height = "h-96",
-  slidesPerView = 3,
   spaceBetween = 50,
   autoplay = 2000,
   loop = true,
@@ -29,8 +27,6 @@ export const Slider = ({
     category: string;
     items: Project[];
   }[];
-  height?: string;
-  slidesPerView?: number;
   spaceBetween?: number;
   autoplay?: number;
   loop?: boolean;

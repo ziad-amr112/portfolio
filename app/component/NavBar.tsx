@@ -3,7 +3,6 @@ import React from "react";
 import PhoneNav from "./PhoneNav";
 import Logo from "./Logo";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./ToggleDarkLight";
 export const NAV_LINKS = [
   { text: "Home", link: "" },

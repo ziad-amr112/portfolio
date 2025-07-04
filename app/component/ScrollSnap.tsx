@@ -15,9 +15,9 @@ const HorizontalScroll = ({ items, paragraph }: { items: any[]; paragraph?: stri
 
         const getScrollConfig = () => {
       if (window.innerWidth < 768) {
-        return { multiplier: 2.5 }; // كانت 1.5، زودناها عشان السحب يكون أبطأ
+        return { multiplier: 2.5 }; 
       } else if (window.innerWidth < 1024) {
-        return { multiplier: 1.5 }; // كانت 1.2
+        return { multiplier: 1.5 }; 
       } else {
         return { multiplier: 1.05 };
       }

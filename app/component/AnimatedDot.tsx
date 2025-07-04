@@ -59,7 +59,6 @@ const AnimatedDot = () => {
           dot.vx += Math.cos(angle) * force * 1.2;
           dot.vy += Math.sin(angle) * force * 1.2;
 
-          // تحديد السرعة القصوى
           const speed = Math.sqrt(dot.vx * dot.vx + dot.vy * dot.vy);
           if (speed > maxSpeed) {
             const ratio = maxSpeed / speed;

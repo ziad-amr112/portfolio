@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 
 interface GridContainerProps {
   children: ReactNode;
-  cols?: number; // Change to number for easier handling
+  cols?: number; 
   className?: string;
   motion?: boolean;
 }

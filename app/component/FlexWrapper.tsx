@@ -1,6 +1,5 @@
 import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import Link from "next/link";
 
 interface FlexWrapperProps {
   className?: string;

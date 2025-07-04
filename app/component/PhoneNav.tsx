@@ -50,11 +50,8 @@ const PhoneNav = () => {
           className="slide2 flex items-center text-2xl cursor-pointer inset-0 absolute h-screen z-[89]  bg-main2 translate-x-[100%] 
     mdg:hidden  w-full"
         >
-          {/* <div className=" w-[80%] h-full absolute right-0 top-10">
-            <Image src={"/bg-mobile.svg"} alt="" fill className=" object-contain" />
-          </div> */}
+       
           <ul className="flex mx-auto lg:ml-40 items-start  justify-center flex-col gap-5">
-            {" "}
             {NAV_LINKS.map((link, i) => (
               <li
                 onClick={handleClose}

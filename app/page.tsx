@@ -55,14 +55,12 @@ export default function Home() {
     
         ]}
         title="My Education"   />
-      {/* ده سكشن أنا مين  */}
 
       <AboutMe
   name="Ziad Amr"
   height="h-64 lg:h-96"
   text="I'm Ziad, a performance marketer helping brands turn ad spend into predictable profit. After mastering core strategies in advertising and funnel building, I’m now seeking ambitious brands to collaborate with and scale fast using data-backed campaigns. Let’s grow together."
 />
-
     </section>
   );
 }
