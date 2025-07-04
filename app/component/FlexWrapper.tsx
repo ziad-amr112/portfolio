@@ -8,7 +8,7 @@ interface FlexWrapperProps {
   href?: string;
 }
 
-const FlexWrapper: React.FC<FlexWrapperProps> = ({ className, children, max = true, href }) => {
+const FlexWrapper: React.FC<FlexWrapperProps> = ({ className, children, max = true }) => {
   const content = <div className={`flex gap-5 w-full flex-col md:flex-row lg:gap-8 ${className || ""}`}>{children}</div>;
 
   if (max) {

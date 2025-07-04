@@ -8,7 +8,7 @@ interface GridContainerProps {
   motion?: boolean;
 }
 
-const GridContainer: React.FC<GridContainerProps> = ({ children, cols = 4, className, motion }) => {
+const GridContainer: React.FC<GridContainerProps> = ({ children, cols = 4, className }) => {
   const gridColsClass =
     {
       1: "grid-cols-1",
