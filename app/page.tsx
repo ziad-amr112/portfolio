@@ -21,8 +21,6 @@ export default function Home() {
       <img src="/service-line.png" alt="Service line" />
    
   <OverlappingSlider
-    slidesPerView={2}
-    height={" h-44"}
     types={[
       {
         category: "E-commerce Campaigns",
@@ -41,8 +39,6 @@ export default function Home() {
   />
   <img src="/service-line.png" alt="Service line" />
       <OverlappingSlider
-        slidesPerView={2}
-        height={" h-44"}
         types={[
           {
             category: "Courses",
@@ -58,7 +54,7 @@ export default function Home() {
 
       <AboutMe
   name="Ziad Amr"
-  height="h-64 lg:h-96"
+  height="h-60 lg:h-60"
   text="I'm Ziad, a performance marketer helping brands turn ad spend into predictable profit. After mastering core strategies in advertising and funnel building, I’m now seeking ambitious brands to collaborate with and scale fast using data-backed campaigns. Let’s grow together."
 />
     </section>

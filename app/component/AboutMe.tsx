@@ -2,12 +2,10 @@ import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import InfinteTitle from "./InfinteTitle";
 import { TypographyH2, TypographyP } from "./TypoGraphy";
-import { Button } from "@/components/ui/button";
-import { EMAIL } from "../constants";
 
 const AboutMe = ({
   text,
-  height = "h-96",
+  height = "h-60",
   name = "Ziad",
 }: {
   text?: string;
@@ -23,9 +21,6 @@ const AboutMe = ({
             ME
           </TypographyH2>
           <TypographyP>{text}</TypographyP>
-          <Button className="rounded-full w-fit">
-            <a href={`mailto:${EMAIL}`}>Contact Me</a>
-          </Button>
         </div>
       </div>
       <h4 className="text-7xl opacity-60 font-bold lg:block hidden text-main2 absolute right-10 bottom-0">
