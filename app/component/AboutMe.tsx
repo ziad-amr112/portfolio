@@ -13,7 +13,7 @@ const AboutMe = ({
   name: string;
 }) => {
   return (
-    <MaxWidthWrapper id="about" className="relative">
+    <MaxWidthWrapper id="about" className="relative mb-24">
       <div className={`flex flex-col gap-4 lg:flex-row ${height}`}>
         <div className="flex flex-col gap-4">
           <TypographyH2 className="flex items-center gap-3 text-main">
