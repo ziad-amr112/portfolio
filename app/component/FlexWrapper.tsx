@@ -4,15 +4,22 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 interface FlexWrapperProps {
   className?: string;
   children: React.ReactNode;
-  max?: boolean;
-  href?: string;
+  useMaxWidthWrapper?: boolean;
 }
 
-const FlexWrapper: React.FC<FlexWrapperProps> = ({ className, children, max = true }) => {
-  const content = <div className={`flex gap-5 w-full flex-col md:flex-row lg:gap-8 ${className || ""}`}>{children}</div>;
+const FlexWrapper: React.FC<FlexWrapperProps> = ({
+  className = "",
+  children,
+  useMaxWidthWrapper = true,
+}) => {
+  const content = (
+    <div className={`flex gap-5 w-full flex-col md:flex-row lg:gap-8 ${className}`}>
+      {children}
+    </div>
+  );
 
-  if (max) {
-    return <MaxWidthWrapper >{content}</MaxWidthWrapper>;
+  if (useMaxWidthWrapper) {
+    return <MaxWidthWrapper>{content}</MaxWidthWrapper>;
   }
 
   return content;

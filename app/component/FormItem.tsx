@@ -1,17 +1,22 @@
 "use client";
-import { FormField, FormLabel, FormControl, FormDescription, FormMessage, FormItem } from "@/components/ui/form";
+import { FormField, FormLabel, FormControl, FormMessage, FormItem } from "@/components/ui/form";
 import React from "react";
 import { useFormContext } from "react-hook-form";
 
-const FormInput = ({ children, name }: { children: React.ReactNode; name: string }) => {
+interface FormInputProps {
+  children: React.ReactNode;
+  name: string;
+}
+
+const FormInput: React.FC<FormInputProps> = ({ children, name }) => {
   const form = useFormContext();
   return (
-    <FormField 
+    <FormField
       control={form.control}
       name={name}
       render={() => (
-        <FormItem className=" w-full">
-          <FormLabel />
+        <FormItem className="w-full">
+          <FormLabel htmlFor={name} />
           <FormControl>{children}</FormControl>
           <FormMessage />
         </FormItem>

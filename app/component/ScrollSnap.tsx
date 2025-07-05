@@ -1,31 +1,35 @@
 "use client";
+
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useEffect, useState } from "react";
-import { TypographyH1, TypographyH2, TypographyP } from "./TypoGraphy";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import Image from "next/image";
 import InfinteTitle from "./InfinteTitle";
+import { TypographyH1, TypographyH2, TypographyP } from "./TypoGraphy";
 
-const HorizontalScroll = ({ items, paragraph }: { items: any[]; paragraph?: string }) => {
+gsap.registerPlugin(ScrollTrigger);
+
+interface HorizontalScrollItem {
+  title?: string;
+  description?: string;
+  img: string;
+  alt?: string;
+}
+
+interface HorizontalScrollProps {
+  items: HorizontalScrollItem[];
+  paragraph?: string;
+}
+
+const HorizontalScroll: React.FC<HorizontalScrollProps> = ({ items, paragraph }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-        const getScrollConfig = () => {
-      if (window.innerWidth < 768) {
-        return { multiplier: 2.5 }; 
-      } else if (window.innerWidth < 1024) {
-        return { multiplier: 1.5 }; 
-      } else {
-        return { multiplier: 1.05 };
-      }
-    };
-    const{multiplier} = getScrollConfig();
-
     const ctx = gsap.context(() => {
-      let sections: HTMLDivElement[] = gsap.utils.toArray(".panel");
+      const sections = gsap.utils.toArray<HTMLElement>(".panel");
 
       // Title animation
       ScrollTrigger.create({
@@ -35,9 +39,7 @@ const HorizontalScroll = ({ items, paragraph }: { items: any[]; paragraph?: stri
       });
 
       // Initial section animation
-      const animatopn = (section: HTMLElement) =>
-        gsap.to(section.querySelector(".innersection"), { y: 0, opacity: 1 });
-
+      const animatopn = (section: HTMLElement) => gsap.to(section.querySelector(".innersection"), { y: 0, opacity: 1 });
       ScrollTrigger.create({
         trigger: ".container",
         animation: animatopn(sections[0]),
@@ -45,28 +47,23 @@ const HorizontalScroll = ({ items, paragraph }: { items: any[]; paragraph?: stri
         toggleActions: "play none none reverse",
         onEnter: () => setCurrentIndex(0),
       });
-
-      // Horizontal scroll animation
       const animationx = gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: ".container",
           pin: true,
-          scrub:3,
+          scrub: 1.5,
           snap: {
             snapTo: 1 / (sections.length - 1),
             duration: 1.5,
           },
-          end: () => {
-            const container = document.querySelector(".container") as HTMLElement | null;
-            return container ? "+=" + container.offsetWidth * multiplier : "+=0";
-          },
+end: () => ("+=" + (document.querySelector(".container") as HTMLElement)?.offsetWidth) as any,
         },
       });
 
       // Animate each section on enter
-      sections.slice(1).forEach((section: HTMLElement, index: number) => {
+      sections.slice(1).forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section,
           start: "left 60%",
@@ -89,8 +86,8 @@ const HorizontalScroll = ({ items, paragraph }: { items: any[]; paragraph?: stri
       </TypographyH1>
       <TypographyP className="max-w-lg text-black dark:text-gray-50">{paragraph}</TypographyP>
 
-       <div className={`flex w-[${items.length * 100}vw] flex-nowrap h-screen`}>
-        {items.map((item: any, index: number) => (
+      <div className={`flex flex-nowrap h-screen`} style={{ width: `${items.length * 100}vw` }}>
+        {items.map((item, index) => (
           <MaxWidthWrapper
             noPadding
             key={index}
@@ -103,10 +100,10 @@ const HorizontalScroll = ({ items, paragraph }: { items: any[]; paragraph?: stri
                 {index + 1}
               </p>
               <TypographyH2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-black dark:text-white mt-4 font-bold text-center lg:text-left">
-                {item.title || "add the title of your services "}
+                {item.title || "Add the title of your services"}
               </TypographyH2>
               <TypographyP className="text-xs sm:text-sm md:text-base lg:text-lg text-black dark:text-gray-300 text-center lg:text-left">
-                {item.description || "add any description you want here boi !"}
+                {item.description || "Add any description you want here!"}
               </TypographyP>
             </div>
 

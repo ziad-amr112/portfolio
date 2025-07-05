@@ -2,13 +2,15 @@
   "name": "portfolio-channel",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "postbuild": "node ./node_modules/@netlify/next"
-  },
+ "scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint",
+ "prebuild": "npm run compress:images",
+  "postbuild": "node ./node_modules/@netlify/next",
+  "compress:images": "imagemin public/*.{jpg,jpeg,png} --plugin=mozjpeg --plugin=pngquant --out-dir=public"
+},
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^3.10.0",

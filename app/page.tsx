@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection
   title={
     <>
-      I Turn Ad Spend Into <span className="animate-flashRed font-bold">Profit</span>
+      I Turn Ad Spend Into <span className="text-red-600 font-bold">Profit</span>
     </>
   }
   subtitle="Helping startups & brands scale revenue through data-driven funnels, full-funnel strategy, and ROI-focused execution"
@@ -52,6 +52,7 @@ export default function Home() {
         ]}
         title="My Education"   />
 
+              <img src="/service-line.png" alt="Service line" />
       <AboutMe
   name="Ziad Amr"
   height="h-60 lg:h-60"

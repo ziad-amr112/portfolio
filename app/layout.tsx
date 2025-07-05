@@ -11,15 +11,15 @@ import Footer from "./component/Footer";
 import { ThemeProvider } from "./context/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "add title",
+  title: "Ziad Media Buying",
   openGraph: {
     type: "website",
-    title: "add title",
-    description: "add description.",
+    title: "Ziad Media Buying",
+    description: "Performance Marketing portfolio showing campaigns, results, and expertise.",
     images: [
       {
-        url: "/noor.jpg",
-        alt: "add title",
+        url: "/Hollow-Knight-Background-PNG-Image.png",
+        alt: "Ziad Media Buying",
       },
     ],
   },

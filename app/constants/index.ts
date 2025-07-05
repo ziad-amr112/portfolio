@@ -78,8 +78,6 @@ const ecommerceProjects  = [
       "A/B tested emotional hooks",
       "Generated 7.2x ROAS on $300 budget",
     ],
-      link: "#",
-    iconLists: ["/meta_PNG12.png.webp", "/canva.png.webp", "/goolgeanalytics.png.webp"],
   },
   
   {
@@ -94,8 +92,6 @@ const ecommerceProjects  = [
       "5.1x blended ROAS",
       "$6.1K revenue from $1.5K ad spend",
     ],
-    iconLists: ["/meta_PNG12.png.webp", "/canva.png.webp", "/google-icon.png.webp", "/goolgeanalytics.png.webp"],
-      link: "#",
 
   },
   {
@@ -110,9 +106,6 @@ const ecommerceProjects  = [
       "Retargeted with urgency-based carousel",
       "5.6x ROAS — Sold out $85 perfume line",
     ],
-    iconLists: ["/meta_PNG12.png.webp", "/tiktok.png.webp", "/canva.png.webp", "/goolgeanalytics.png.webp"],
-      link: "#",
-
   },
 
 
@@ -131,8 +124,7 @@ const leadGenProjects = [
       "218 signups in 6 days",
       "CPL: $0.74 | CTR: 4.8%",
     ],
-    iconLists: ["/meta_PNG12.png.webp","/Mailchimp.png.webp", "/goolgeanalytics.png.webp"],
-  link: "#",
+  
 
   
   },
@@ -149,8 +141,7 @@ img: ["/programming1.png.webp","/programming2.png.webp"],
       "457 leads | CPL: $0.68 | Conversion rate: 21%",
       "Used Meta + TikTok with custom audiences based on behavior",
     ],
-    iconLists: ["/meta_PNG12.png.webp", "/tiktok.png.webp", "Mailchimp.png.webp", "/notion.png.webp"],
-  link: "#",
+    
 
    
   }
